@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/soccer"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,5 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="411dp"
+        android:layout_height="109dp"
+        android:text="Top South African Teams"
+        android:textColor="@color/design_default_color_error"
+        android:textColorLink="@color/design_default_color_primary_dark"
+        android:textFontWeight="@integer/material_motion_duration_medium_1"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="76dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
