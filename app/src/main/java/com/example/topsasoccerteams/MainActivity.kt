@@ -7,9 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
+import kotlin.math.log
+
+fun logArrValues(arr: Array<String>) {
+    log.v("Array values:", arr.toString(arr))
+}
 
 class MainActivity: AppCompatActivity() {
 
+    
     val teams = arrayOf<String>("Man Sundown FC", "Man City", "Man United", "Tottenham")
 
     override fun onCreate(savedInstanceState: Bundle?) {
