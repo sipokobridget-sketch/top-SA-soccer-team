@@ -8,7 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
 
     val teams = arrayOf<String>("Man Sundown FC", "Man City", "Man United", "Tottenham")
 
@@ -19,10 +19,21 @@ class MainActivity : AppCompatActivity() {
 
         val teamsTxt = findViewById<TextView>(R.id.textView)
 
-        //u
+        //reassigning position 0 of the teams array
         teams[0] = "Man Sundown FC :)"
+
+        //variable to hold all teams ready to display
+        var teamsDisplay =""
+        var counter= 0
+
+        //loop to display top 5 soccer teams
+        while (counter < teams.count()) {
+            teamsDisplay += "${teams[counter]}\n"
+            counter++
+        }
+
         //display top 5 soccer teams in the textview on UI
-        teamsTxt.text = Arrays.toString(a = teams)
+        teamsTxt.text = Arrays.toString(teams)
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
